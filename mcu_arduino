@@ -1,0 +1,15 @@
+char mystr[16];
+String a;
+
+void setup()
+{
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  while(Serial.available()){
+    Serial.readBytes(mystr, 16);
+    Serial.println(mystr);
+  }
+}
